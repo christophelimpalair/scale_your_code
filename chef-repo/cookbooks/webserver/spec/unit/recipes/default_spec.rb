@@ -19,9 +19,8 @@ describe 'webserver::default' do
       chef_run # This should not raise an error
     end
     
-    it 'it installs apache' do
-      # expect(package "apache2").to be_installed
-      expect(chef_run).to install_package "apache2"
+    it 'it installs nginx' do
+      expect(chef_run).to install_package "nginx"
     end
 
 
